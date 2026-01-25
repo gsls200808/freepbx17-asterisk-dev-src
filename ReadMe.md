@@ -28,8 +28,8 @@ asterisk-dev_20.6.0
 
 ```
 git clone https://github.com/gsls200808/freepbx17-asterisk-dev-src.git
-cd src
-sudo tar -zxvf include20.17.0.tar.gz -C /usr/include/
+cd freepbx17-asterisk-dev-src/src
+sudo tar -zxvf include20.17.0.tar.gz -C /usr/include/ --strip-components=1
 ```
 
 
@@ -73,9 +73,10 @@ sudo cp -rpv /usr/src/asterisk-20.17.0/include/* /usr/include/
 
 
 
-在EC20编译项目里注意指定DESTDIR目录
+在EC20编译项目里注意指定DESTDIR目录,必须用root权限
 
 ```
+su root
 git clone https://github.com/IchthysMaranatha/asterisk-chan-quectel
  cd asterisk-chan-quectel
  ./bootstrap
