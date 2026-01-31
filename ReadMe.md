@@ -58,6 +58,10 @@ wget https://github.com/asterisk/asterisk/releases/download/20.17.0/asterisk-20.
 tar -zxvf asterisk-20.17.0.tar.gz
 cd asterisk-20.17.0
 
+#安装依赖
+apt install -y libedit-dev uuid-dev libxml2-dev libjwt-dev libsqlite3-dev libspeexdsp-dev
+#第一次编译 20可能不需要
+./configure 
 #选择配置模块 弹窗后 按ESC退出
 make menuselect
 
